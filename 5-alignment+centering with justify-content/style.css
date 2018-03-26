@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.box {
+    color: white;
+    font-size: 100px;
+    text-align: center;
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+/* Colours for each box */
+
+.box1 {
+    background: #1abc9c;
+}
+
+.box2 {
+    background: #3498db;
+}
+
+.box3 {
+    background: #9b59b6;
+}
+
+.box4 {
+    background: #34495e;
+}
+
+.box5 {
+    background: #f1c40f;
+}
+
+.box6 {
+    background: #e67e22;
+}
+
+.box7 {
+    background: #e74c3c;
+}
+
+.box8 {
+    background: #bdc3c7;
+}
+
+.box9 {
+    background: #2ecc71;
+}
+
+.box10 {
+    background: #16a085;
+}
+
+.container1,
+.container2,
+.container3,
+.container4,
+.container5,
+.container6 {
+    display: flex;
+    border: 5px solid springgreen;
+}
+
+.container1 {
+    /* default. Aligned to left/start */
+    justify-content: flex-start;
+}
+
+.container2 {
+    justify-content: center;
+}
+
+.container3 {
+    /* aligned to end(right) */
+    justify-content: flex-end;
+}
+
+.container4 {
+    justify-content: space-between;
+}
+
+.container5 {
+    justify-content: space-evenly;
+}
+
+.container {
+    display: flex;
+    border: 5px solid red;
+    height: 2000px;
+}
+
+.container6 {
+    /* When the direction is changed, the items will be aligned from top to bottom  */
+    /* When the direction is column, the main axis is top to bottom */
+    /* When the direction is row, which is default, the main axis is left to right */
+    flex-direction: column;
+    justify-content: space-around;
+}
