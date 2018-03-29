@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.box {
+    color: white;
+    font-size: 100px;
+    text-align: center;
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+/* Colours for each box */
+
+.box1 {
+    background: #1abc9c;
+}
+
+.box2 {
+    background: #3498db;
+}
+
+.box3 {
+    background: #9b59b6;
+}
+
+.box4 {
+    background: #34495e;
+}
+
+.box5 {
+    background: #f1c40f;
+}
+
+.box6 {
+    background: #e67e22;
+}
+
+.box7 {
+    background: #e74c3c;
+}
+
+.box8 {
+    background: #bdc3c7;
+}
+
+.box9 {
+    background: #2ecc71;
+}
+
+.box10 {
+    background: #16a085;
+}
+
+/* Starting point */
+
+.container {
+    height: 50vh;
+    display: flex;
+}
+.container1{
+    /* center the items vertically inside the container */
+    align-items: center;
+    /* Now center them horizontally(through main axis) too */
+    justify-content: center;
+    border: 5px solid #16a085;
+}
+.container2{
+    /* Moves the items to left-bottom */
+    align-items: flex-end;
+    /* Moves the items to the right most edge */
+    justify-content: flex-end;
+    border: 5px solid #e67e22;
+}
+.container3{
+    /* Matches the base lines of items with different sizes */
+    /* All the text in the items have the same baseline (i.e.)the base of all the items
+    will be same with this */
+    /* This is very helpful in aligning items with varying sizes */
+    align-items: baseline;
+    border: 5px solid greenyellow;
+}
+.container3 .box{
+    font-size:40px;
+}
+.container3 .box1{
+    font-size:50px;
+}
+.container3 .box2{
+    font-size:60px;
+}
+.container3 .box3{
+    font-size:70px;
+}
+.container4{
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid firebrick;
+}
+.container4 .box{
+    font-size:40px;
+}
+.container4 .box1{
+    font-size:55px;
+}
+.container4 .box2{
+    font-size:70px;
+}
+.container4 .box3{
+    font-size:85px;
+}
+.container4 .box4{
+    font-size:100px;
+}
