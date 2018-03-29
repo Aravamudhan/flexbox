@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.box {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+/* Colours for each box */
+
+.box1 {
+    background: #1abc9c;
+}
+
+.box2 {
+    background: #3498db;
+}
+
+.box3 {
+    background: #9b59b6;
+}
+
+.box4 {
+    background: #34495e;
+}
+
+.box5 {
+    background: #f1c40f;
+}
+
+.box6 {
+    background: #e67e22;
+}
+
+.box7 {
+    background: #e74c3c;
+}
+
+.box8 {
+    background: #bdc3c7;
+}
+
+.box9 {
+    background: #2ecc71;
+}
+
+.box10 {
+    background: #16a085;
+}
+
+/* Starting point */
+
+/* To align-content, use the flex-wrap initially to reset the stretch effect then apply the style */
+
+.container {
+    height: 100vh;
+    display: flex;
+    border: 5px solid #16a085;
+    /* By default flex-items stretch to take up the remaining space */
+    /* align-content: flex-start; */
+    align-content: space-around;
+    /* This gives the true width of a flex item */
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 33.33%;
+}
