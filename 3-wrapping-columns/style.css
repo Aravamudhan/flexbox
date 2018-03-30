@@ -68,10 +68,9 @@
 
 .container1,
 .container3 {
-    /* Without setting the flex-wrap to wrap, the flex items are resize to fit inside the container */
-    /* Default is flex-wrap:no-wrap */
-    /* Whatever the size of the flex-items may be, if this option is set, then they items are wrapped */
-    /* to fit inside the container */
+    /* Without setting the flex-wrap to wrap, the flex items try to fit into the single line */
+    /* Default is flex-wrap:no-wrap. By setting it to wrap, the flex-items are allowed to
+    wrap to multiple lines based on their size */
     flex-wrap: wrap;
 }
 

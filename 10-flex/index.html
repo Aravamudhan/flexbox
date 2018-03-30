@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex property</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- flex property is shorthand for flex-grow, flex-shrink, flex-basis
+    flex-grow - when there is extra space, how to divide the space among every item. If an item has 2,
+    that means, that item should get twice as much space from the extra space as other items.
+    default flex-grow:0 - do not take up any extra space.
+
+    flex-shrink - When there is no extra space, this property says how items should divide up the available space
+    This is opposite of flex-grow. Meaning, that any value would mean how much lesser space should an item
+    take compared to other items. flex-grow:2 is twice as much flex-shrink:2 twice as little
+    default flex-shrink:1 when there is less space, you should reduce yourselves as much as other items do
+
+    flex-basis - Whenever there is no extra space this property kicks in.  Not just that, before an item grows or shrinks, 
+    this property sets its size. By default it is auto-->
+    <div class="container1">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
+    <div class="container1">
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+        <div class="box box6">6</div>
+    </div>
+    <div class="container1">
+        <div class="box box7">7</div>
+        <div class="box box8">8</div>
+        <div class="box box9">9</div>
+    </div>
+</body>
+
+</html>

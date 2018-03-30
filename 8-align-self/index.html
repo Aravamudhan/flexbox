@@ -5,16 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Align content</title>
+    <title>Align self</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- align-items IS FOR ITEMS IN A SINGLE ROW
-    align-content ARRANGES ALL THE ITEMS INSIDE A CONTAINER
-    align-content is used when multiple rows of items are present and they all need to be 
-    arranged. This has NO EFFECT when there is only one line of flex-items. This aligns a
-    flex container's lines -->
+    <!-- align-self overrides the align-items property of the parent container.
+        By default the properties set in the parent is used to align the flex items along the cross axis. -->
     <div class="container container1">
         <div class="box box1">1</div>
         <div class="box box2">2</div>

@@ -8,7 +8,7 @@
 
 .box {
     color: white;
-    font-size: 50px;
+    font-size: 100px;
     text-align: center;
     text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
     padding: 10px;
@@ -58,20 +58,41 @@
 
 /* Starting point */
 
-/* To align-content, use the flex-wrap initially to reset the stretch effect then apply the style */
-
-.container {
-    height: 100vh;
+.container1 {
     display: flex;
     border: 5px solid #16a085;
-    /* By default flex-items stretch to take up the remaining space.
-    align-items : stretch is default */
-    /* align-content: flex-start; */
-    align-content: space-around;
-    /* This gives the true width of a flex item */
-    flex-wrap: wrap;
 }
 
-.box {
-    width: 33.33%;
+.container1 .box {
+    /* All items should be of same size. They should divide the extra space */
+    flex: 1;
+}
+
+.container2 {
+    display: flex;
+    border: 5px solid #3498db;
+}
+
+.container2 .box {
+    flex: 1;
+}
+
+.container2 .box3 {
+    flex: 2;
+}
+
+.container3 {
+    display: flex;
+    background-origin: ;
+    border: 5px solid #f1c40f;
+}
+
+.container3 .box {
+    /* This should not have any effects unless there is an item with the size flex:1 */
+    /* Then this makes every other item to be of twice as much size as that one item */
+    flex: 2;
+}
+
+.container3 .box6 {
+    flex: 1;
 }

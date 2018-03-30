@@ -58,20 +58,28 @@
 
 /* Starting point */
 
-/* To align-content, use the flex-wrap initially to reset the stretch effect then apply the style */
-
 .container {
     height: 100vh;
     display: flex;
     border: 5px solid #16a085;
-    /* By default flex-items stretch to take up the remaining space.
-    align-items : stretch is default */
-    /* align-content: flex-start; */
-    align-content: space-around;
-    /* This gives the true width of a flex item */
-    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .box {
     width: 33.33%;
+}
+
+.box2 {
+    padding-bottom: 30px;
+}
+
+.box4 {
+    padding-bottom: 60px;
+    align-self: center;
+}
+
+.box6 {
+    padding-bottom: 90px;
+    /* Overrides the align-items:flex-start property set in the parent container */
+    align-self: flex-end;
 }
