@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: -webkit-gradient(linear, left top, right top, from(#237A57), to(#093028));
+    background: linear-gradient(to right, #237A57, #093028);
+    font-size: 12px;
+}
+
+/* The style below is more complicated than they need to be.
+The ultimate aim was to create a navbar through flex box. The container need not have been
+a flex container */
+
+.container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.flex-nav {
+    width: 100%;
+}
+
+.flex-nav ul {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: black;
+    height: 30vh;
+    width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.flex-nav ul li {
+    background: gold;
+    margin: 10px;
+    -ms-flex-negative: 1;
+        flex-shrink: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-weight: bold;
+}
+
+.flex-nav ul li a {
+    color: inherit;
+    text-decoration: none;
+    padding: 15px;
+}
+
+.flex-nav ul li a:hover {
+    color: #0f0000;
+    background: #d1c328;
+}
