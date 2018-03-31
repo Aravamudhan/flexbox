@@ -1,0 +1,15 @@
+{
+  "name": "autoprefixing",
+  "version": "1.0.0",
+  "description": "Working with autoprefixing css using grunt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "amudhan",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0"
+  }
+}

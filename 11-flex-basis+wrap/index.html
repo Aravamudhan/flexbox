@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex-basis with wrap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- flex-basis flex-grow and flex-shrink only work on the row that they are applied. 
+    The browser calculates width,height etc only for the item to which the properties are applied
+    with respect to the row that item is present. When flex-grow is applied to a container, the actual
+    flex-basis value/size is applied to items and the items will wrap to the next row if the size 
+    overflows. Now if the flex property is applied to the items in the next row, those properties
+    will be applied only to the items in that row. It wont't spill over to top or bottom -->
+    <div class="container1">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+        <div class="box box6">6</div>
+    </div>
+</body>
+
+</html>
