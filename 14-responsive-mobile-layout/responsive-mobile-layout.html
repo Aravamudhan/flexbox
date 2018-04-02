@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive layout</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="build/layout.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="top-header">Falling sky</h1>
+    </header>
+    <div class="wrapper">
+        <a href="#" class="toggleNav">☰ Menu</a>
+        <nav class="flex-nav">
+            <ul>
+                <li>
+                    <a href="#">Item 01</a>
+                </li>
+                <li>
+                    <a href="#">Item 02</a>
+                </li>
+                <li>
+                    <a href="#">Item 03</a>
+                </li>
+                <li>
+                    <a href="#">Item 04</a>
+                </li>
+                <li>
+                    <a href="#">Item 05</a>
+                </li>
+                <li>
+                    <a href="#">Item 06</a>
+                </li>
+                <li class="social">
+                    <a href="http://twitter.com/wesbos">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="social">
+                    <a href="http://facebook.com/wesbos.developer">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                </li>
+                <li class="social">
+                    <a href="http://github.com/wesbos">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </li>
+                <li class="social">
+                    <a href="http://instagram.com/wesbos">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <section class="hero">
+        <div class="img-block">
+            <img src="https://images.unsplash.com/photo-1521072100039-6052edf01606?auto=format&fit=crop&w=750&q=80" alt="The main image">
+            <div>
+                <h2>The Sky lines of Newyork</h2>
+            </div>
+            <form action="" class="signup-form">
+                <label for="username">Name:</label>
+                <input type="text" id="username" name="username">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" />
+                <button type="submit">Sign me up!</button>
+            </form>
+        </div>
+    </section>
+</body>
+<script>
+    let toggleButton = document.querySelector(".toggleNav");
+    let nav = document.querySelector(".flex-nav");
+    toggleButton.addEventListener("click", function (e) {
+        if (nav.classList.contains("open")) {
+            nav.classList.remove("open");
+        } else {
+            nav.classList.add("open");
+        }
+    });
+</script>
+
+</html>

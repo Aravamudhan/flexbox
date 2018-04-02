@@ -1,0 +1,196 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background: #49c5b6;
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+}
+
+header {
+    width: 100%;
+    height: 4em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+.top-header {
+    width: 50%;
+    text-align: center;
+}
+
+.flex-nav ul li a {
+    width: 100%;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+    background: #DF6C4F;
+    padding: 1em;
+    display: inline-block;
+    text-align: center;
+    font-size: 1rem;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.flex-nav ul li a:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.flex-nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style-type: none;
+}
+
+.flex-nav ul li {
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+}
+
+.flex-nav ul li.social {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+}
+
+.hero {
+    width: 100%;
+    height: 90vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+}
+
+.toggleNav {
+    display: none;
+}
+
+.signup-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.signup-form label,
+.signup-form button {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: inline-block;
+}
+
+.signup-form input {
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+}
+
+@media all and (max-width:800px) {
+    .wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 0;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    }
+    .toggleNav {
+        display: block;
+        background: #DF6C4F;
+        color: inherit;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        font-size: 1rem;
+        width: 90%;
+        height: 100%;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+        padding: 10px;
+    }
+    .toggleNav:hover {
+        background: rgba(0, 0, 0, 0.3);
+    }
+    .flex-nav {
+        display: none;
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+    .flex-nav ul {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    }
+    .flex-nav ul li {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 90%;
+                flex: 1 1 90%;
+    }
+    .flex-nav ul li.social {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 25%;
+                flex: 1 1 25%;
+    }
+    .flex-nav.open {
+        display: block;
+    }
+    .hero {
+        width: 100%;
+    }
+    .hero img {
+        width: 90%;
+    }
+    .signup-form {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    }
+    .signup-form input,
+    .signup-form label {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 50%;
+                flex: 1 1 50%;
+    }
+    .signup-form button {
+        /* flex-basis: 25%; */
+        /* flex: 1 1 25%; */
+        width: 50%;
+    }
+
+}
