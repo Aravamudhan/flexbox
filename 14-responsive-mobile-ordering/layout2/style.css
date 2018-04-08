@@ -1,0 +1,147 @@
+/* Some CSS Setup - nothing to do with flexbox */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+}
+
+a {
+    color: white;
+    font-weight: 100;
+    letter-spacing: 2px;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px 5px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+a:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.toggleNav {
+    display: none;
+}
+
+img {
+    width: 100%;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+input {
+    padding: 10px;
+    border: 0;
+}
+
+section,
+footer {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px 0;
+    color: white;
+    font-weight: 100;
+}
+
+/* Flex Container */
+
+.flex-nav ul {
+    border: 1px solid black;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.flex-nav li {
+    flex: 3;
+}
+
+.flex-nav li.social {
+    flex: 1;
+}
+
+@media all and (max-width:1000px) {
+    .flex-nav ul {
+        flex-wrap: wrap;
+    }
+    .flex-nav li {
+        flex: 1 1 50%;
+    }
+    .flex-nav li.social {
+        flex: 1 1 25%;
+    }
+}
+
+@media all and (max-width:500px) {
+    /* When the page hits the 500px mark we want to do following things
+    1. Enable the hamburder menu button that is hidden
+    2. Reorder in a way that menu -> title -> details -> hero -> subscribe.
+    Before the 500px mark it is title -> nav(the menu) -> hero -> details -> subscribe */
+    /* The navbar items should take up the entire row. */
+    .flex-nav li {
+        flex-basis: 100%;
+    }
+    /* 1. Enabling the hamburger  */
+    /* Make the hamburger icon visible*/
+    .toggleNav {
+        display: block;
+    }
+    /* and hide the navbar  */
+    .flex-nav ul {
+        display: none;
+        transition: all 0.5s;
+    }
+    /* On clicking the hamburger icon open the navbar items */
+    .flex-nav ul.open {
+        display: flex;
+    }
+    /* 2. Ordering */
+    /* To order items they have to be flex-items. For an element to become flex-item, its parent
+    should become a flex container. Here we are changing the wrapper to a flex-container */
+    /* FLEX CONTAINER */
+    .wrapper {
+        display: flex;
+        /* This must be column. Otherwise all the flex-items will be stacked one next to each other
+        or below based on their property(block or inline block etc)*/
+        flex-direction: column;
+    }
+    /* By default we are making all the flex-items to have a higher order number. A higher ordered
+     items are STACKED AFTER the lower ordered item. We make every thing high and reduce the order
+     of items that we want to stack at the start of the flow*/
+     /* FLEX-ITEMS */
+    .wrapper>* {
+        /* Give some really high number */
+        order: 100;
+    }
+    /* Nav bar at the top of the page */
+    .flex-nav {
+        order: 1;
+    }
+    /* The title comes after that */
+    .top {
+        order: 2;
+    }
+    /* Then the details and after details everything else */
+    .details {
+        order: 3;
+    }
+}

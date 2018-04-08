@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>The flexbox blog</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- It is always better to wrap the content of a page. It makes it easier to turn the layout into a flexbox -->
+    <div class="wrapper">
+
+        <header class="top">
+            <h1>
+                <a href="#">The fantastic flexbox!</a>
+            </h1>
+        </header>
+
+        <nav class="flex-nav">
+            <a href="#" class="toggleNav">☰ Menu</a>
+            <ul>
+                <li>
+                    <a href="#">Item 01</a>
+                </li>
+                <li>
+                    <a href="#">Item 02</a>
+                </li>
+                <li>
+                    <a href="#">Item 03</a>
+                </li>
+                <li>
+                    <a href="#">Item 04</a>
+                </li>
+                <li>
+                    <a href="#">Item 05</a>
+                </li>
+                <li>
+                    <a href="#">Item 06</a>
+                </li>
+                <li class="social">
+                    <a href="#">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="social">
+                    <a href="#">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                </li>
+                <li class="social">
+                    <a href="http://github.com/aravamudhan">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </li>
+                <li class="social">
+                    <a href="#">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <section class="hero">
+            <img src="https://images.unsplash.com/photo-1521072100039-6052edf01606?auto=format&fit=crop&w=750&q=80">
+        </section>
+
+        <section class="details">
+            <p>A blog that talks about Flexbox</p>
+            <p>Sign up today to receive my articles!</p>
+        </section>
+
+        <section class="signup">
+            <form action="" class="signup">
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Email Address">
+                <input type="submit" value="Sign me up!">
+            </form>
+        </section>
+
+        <footer>
+            <p>&copy; Amudhan</p>
+        </footer>
+
+
+    </div>
+
+    <script>
+        let toggleButton = document.querySelector(".toggleNav");
+        let nav = document.querySelector(".flex-nav ul");
+        toggleButton.addEventListener("click", function (e) {
+            if (nav.classList.contains("open")) {
+                nav.classList.remove("open");
+            } else {
+                nav.classList.add("open");
+            }
+        });
+    </script>
+</body>
+
+</html>
