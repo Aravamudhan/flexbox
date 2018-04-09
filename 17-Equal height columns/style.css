@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Hi Melody', cursive;
+    font-size: 30px;
+    background:#CCCCCC;
+}
+.small{
+    font-size: 20px;
+}
+.large{
+    font-size:40px;
+}
+.elements{
+    display: flex;
+    flex-wrap: wrap;
+}
+.item{
+    background: #CB2D6F;
+    padding:1rem;
+    margin:1rem;
+    flex:1 1 calc(33.33% - 6rem);
+}
